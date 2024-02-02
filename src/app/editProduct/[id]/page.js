@@ -5,6 +5,7 @@ import { BASE_API_URL } from "../../../../utils/constants";
 const getProductbyId = async (id) => {
   try {
     const res = await fetch(`${BASE_API_URL}/api/products/${id}`, {
+      method: "GET",
       cache: "no-store",
     });
     if (!res.ok) {

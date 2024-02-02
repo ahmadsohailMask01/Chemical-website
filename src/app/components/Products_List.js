@@ -6,6 +6,7 @@ import { BASE_API_URL } from "../../../utils/constants";
 const getProducts = async () => {
   try {
     const res = await fetch(`${BASE_API_URL}/api/products`, {
+      method: "GET",
       cache: "no-store",
     });
 
@@ -20,6 +21,9 @@ const getProducts = async () => {
 };
 
 const Productslist = async () => {
+  if (!BASE_API_URL) {
+    return null;
+  }
   const { products } = await getProducts();
   const curr = Intl.NumberFormat("en-PK", {
     style: "currency",
