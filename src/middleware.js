@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { BASE_API_URL } from "../utils/constants";
 
 // This function can be marked `async` if using `await` inside
 export function middleware(request) {
@@ -15,9 +16,9 @@ export function middleware(request) {
   let condition4 = verify && url.includes("/admin_login");
 
   if (condition1 || condition2 || condition3) {
-    return NextResponse.redirect("http://localhost:3000/admin_login");
+    return NextResponse.redirect(`${BASE_API_URL}/admin_login`);
   } else if (condition4) {
-    return NextResponse.redirect("http://localhost:3000/admin_dashboard");
+    return NextResponse.redirect(`${BASE_API_URL}/admin_dashboard`);
   }
 }
 
