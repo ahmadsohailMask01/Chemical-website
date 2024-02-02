@@ -21,11 +21,7 @@ const getProducts = async () => {
 };
 
 const Productslist = async () => {
-  if (!BASE_API_URL) {
-    return null;
-  }
-  // const { products } = await getProducts();
-  const products = "";
+  const { products } = await getProducts();
   const curr = Intl.NumberFormat("en-PK", {
     style: "currency",
     currency: "PKR",
