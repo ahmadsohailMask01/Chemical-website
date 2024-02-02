@@ -21,9 +21,6 @@ const getProducts = async () => {
 };
 
 const AdminProductslist = async () => {
-  if (!BASE_API_URL) {
-    return null;
-  }
   const { products } = await getProducts();
   const pk_currency = Intl.NumberFormat("en-PK", {
     style: "currency",

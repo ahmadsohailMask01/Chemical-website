@@ -17,9 +17,7 @@ const getProductbyId = async (id) => {
 };
 const page = async ({ params }) => {
   const { id } = params;
-  if (!BASE_API_URL) {
-    return null;
-  }
+
   const { product } = await getProductbyId(id);
   const { product_title, product_price, product_description } = product;
   return (

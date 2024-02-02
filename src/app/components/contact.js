@@ -26,9 +26,7 @@ const Contact = () => {
         },
         body: JSON.stringify({ name, email, phone, message }),
       });
-      if (!BASE_API_URL) {
-        return null;
-      }
+
       note.success("Contact Details sent Successfully!");
       router.refresh();
       set_name("");
@@ -39,7 +37,6 @@ const Contact = () => {
       console.log(error);
     }
   };
- 
 
   return (
     <>

@@ -16,9 +16,7 @@ const RemoveButton = ({ id }) => {
         await fetch(`${BASE_API_URL}/api/products?id=${id}`, {
           method: "DELETE",
         });
-        if (!BASE_API_URL) {
-          return null;
-        }
+
         note.success("Product deleted successfully");
         router.refresh();
       }

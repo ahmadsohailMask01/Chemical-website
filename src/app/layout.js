@@ -5,7 +5,6 @@ import Footer from "./components/footer";
 import { Bounce, ToastContainer } from "react-toastify";
 import { Toaster } from "react-hot-toast";
 import "react-toastify/dist/ReactToastify.css";
-import { BASE_API_URL } from "../../utils/constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +15,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  if (!BASE_API_URL) {
-    return null;
-  }
   return (
     <html lang="en">
       <body className={inter.className} style={{ padding: `0%`, margin: `0%` }}>

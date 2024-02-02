@@ -23,9 +23,7 @@ const EditProduct = ({ id, title, price, description }) => {
         },
         body: JSON.stringify({ newTitle, newPrice, newDescription }),
       });
-      if (!BASE_API_URL) {
-        return null;
-      }
+
       notify.success("Product Updated Successfully!");
       router.push("/admin_dashboard");
       router.refresh();

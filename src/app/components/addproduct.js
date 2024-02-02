@@ -31,9 +31,6 @@ const AddProduct = () => {
           product_description,
         }),
       });
-      if (!BASE_API_URL) {
-        return null;
-      }
 
       notify.success("Product Created Successfully");
       router.push("/admin_dashboard");

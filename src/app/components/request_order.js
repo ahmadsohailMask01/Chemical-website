@@ -37,9 +37,7 @@ const Request_Product = ({ title, price }) => {
           new_price,
         }),
       });
-      if (!BASE_API_URL) {
-        return null;
-      }
+
       notify.success("Your Order Request is Sent!");
       router.push("/products");
     } catch (error) {
