@@ -19,28 +19,28 @@ const AddProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // try {
-    //   await fetch(`${BASE_API_URL}/api/products`, {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //       product_title,
-    //       product_price,
-    //       product_description,
-    //     }),
-    //   });
-    //   if (!BASE_API_URL) {
-    //     return null;
-    //   }
+    try {
+      await fetch(`${BASE_API_URL}/api/products`, {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          product_title,
+          product_price,
+          product_description,
+        }),
+      });
+      if (!BASE_API_URL) {
+        return null;
+      }
 
-    //   notify.success("Product Created Successfully");
-    //   router.push("/admin_dashboard");
-    //   router.refresh();
-    // } catch (error) {
-    //   notify.error("Failed to create a Product", error);
-    // }
+      notify.success("Product Created Successfully");
+      router.push("/admin_dashboard");
+      router.refresh();
+    } catch (error) {
+      notify.error("Failed to create a Product", error);
+    }
   };
 
   return (

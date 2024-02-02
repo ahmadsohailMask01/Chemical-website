@@ -15,23 +15,23 @@ const EditProduct = ({ id, title, price, description }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // try {
-    //   await fetch(`${BASE_API_URL}/api/products/${id}`, {
-    //     method: "PUT",
-    //     headers: {
-    //       "Content-type": "application/json",
-    //     },
-    //     body: JSON.stringify({ newTitle, newPrice, newDescription }),
-    //   });
-    //   if (!BASE_API_URL) {
-    //     return null;
-    //   }
-    //   notify.success("Product Updated Successfully!");
-    //   router.push("/admin_dashboard");
-    //   router.refresh();
-    // } catch (error) {
-    //   notify.error("Failed to Update the Product", error);
-    // }
+    try {
+      await fetch(`${BASE_API_URL}/api/products/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({ newTitle, newPrice, newDescription }),
+      });
+      if (!BASE_API_URL) {
+        return null;
+      }
+      notify.success("Product Updated Successfully!");
+      router.push("/admin_dashboard");
+      router.refresh();
+    } catch (error) {
+      notify.error("Failed to Update the Product", error);
+    }
   };
 
   return (

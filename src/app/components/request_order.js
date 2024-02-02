@@ -20,31 +20,31 @@ const Request_Product = ({ title, price }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // try {
-    //   await fetch(`${BASE_API_URL}/api/request_order`, {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //       Product_title,
-    //       Product_price,
-    //       client_name,
-    //       client_email,
-    //       client_phone,
-    //       product_amount,
-    //       client_address,
-    //       new_price,
-    //     }),
-    //   });
-    //   if (!BASE_API_URL) {
-    //     return null;
-    //   }
-    //   notify.success("Your Order Request is Sent!");
-    //   router.push("/products");
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    try {
+      await fetch(`${BASE_API_URL}/api/request_order`, {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          Product_title,
+          Product_price,
+          client_name,
+          client_email,
+          client_phone,
+          product_amount,
+          client_address,
+          new_price,
+        }),
+      });
+      if (!BASE_API_URL) {
+        return null;
+      }
+      notify.success("Your Order Request is Sent!");
+      router.push("/products");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const calculate_Price = () => {

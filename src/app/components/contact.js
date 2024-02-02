@@ -18,27 +18,28 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // try {
-    //   await fetch(`${BASE_API_URL}/api/contact`, {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-type": "application/json",
-    //     },
-    //     body: JSON.stringify({ name, email, phone, message }),
-    //   });
-    //   if (!BASE_API_URL) {
-    //     return null;
-    //   }
-    //   note.success("Contact Details sent Successfully!");
-    //   router.refresh();
-    //   set_name("");
-    //   set_email("");
-    //   set_phone("");
-    //   set_message("");
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    try {
+      await fetch(`${BASE_API_URL}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({ name, email, phone, message }),
+      });
+      if (!BASE_API_URL) {
+        return null;
+      }
+      note.success("Contact Details sent Successfully!");
+      router.refresh();
+      set_name("");
+      set_email("");
+      set_phone("");
+      set_message("");
+    } catch (error) {
+      console.log(error);
+    }
   };
+ 
 
   return (
     <>

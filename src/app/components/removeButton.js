@@ -11,20 +11,20 @@ const RemoveButton = ({ id }) => {
   const removeProduct = async (e) => {
     e.preventDefault();
     const confirmed = confirm("Are You Sure?");
-    // try {
-    //   if (confirmed) {
-    //     await fetch(`${BASE_API_URL}/api/products?id=${id}`, {
-    //       method: "DELETE",
-    //     });
-    //     if (!BASE_API_URL) {
-    //       return null;
-    //     }
-    //     note.success("Product deleted successfully");
-    //     router.refresh();
-    //   }
-    // } catch (error) {
-    //   note.error("Failed to Delete Product", error);
-    // }
+    try {
+      if (confirmed) {
+        await fetch(`${BASE_API_URL}/api/products?id=${id}`, {
+          method: "DELETE",
+        });
+        if (!BASE_API_URL) {
+          return null;
+        }
+        note.success("Product deleted successfully");
+        router.refresh();
+      }
+    } catch (error) {
+      note.error("Failed to Delete Product", error);
+    }
   };
 
   return (
