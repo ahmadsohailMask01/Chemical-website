@@ -16,6 +16,7 @@ import { useRouter } from "next/navigation";
 import { toast as notify } from "react-toastify";
 import val1 from "../../../assets/val1.jpg";
 import mis1 from "../../../assets/mis1.jpg";
+import { BASE_API_URL } from "../../../utils/constants";
 
 const MainPage = () => {
   const router = useRouter();
@@ -26,7 +27,7 @@ const MainPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch("http://localhost:3000/api/contact", {
+      await fetch(`${BASE_API_URL}/api/contact`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",
