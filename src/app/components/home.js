@@ -242,6 +242,7 @@ const MainPage = () => {
                 value={name}
                 placeholder="Name"
                 className={styles.input}
+                required={true}
               />
               <input
                 type="email"
@@ -249,6 +250,7 @@ const MainPage = () => {
                 value={email}
                 placeholder="Email"
                 className={styles.input}
+                required={true}
               />
               <input
                 type="text"
@@ -256,6 +258,7 @@ const MainPage = () => {
                 value={phone}
                 placeholder="Phone"
                 className={styles.input}
+                required={true}
               />
               <textarea
                 type="text"
@@ -263,6 +266,7 @@ const MainPage = () => {
                 value={message}
                 placeholder="Message"
                 className={`${styles.input} ${styles.textarea}`}
+                required={true}
               />
               <button
                 type="submit"
