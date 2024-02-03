@@ -34,7 +34,7 @@
   color: #282c34;
   width: 96%;
 }
-.input_price{
+.input_price {
   font-size: 20px;
   padding: 2%;
   color: #282c34;
@@ -48,7 +48,7 @@
 }
 
 /* Firefox */
-.input_price[type=number] {
+.input_price[type="number"] {
   -moz-appearance: textfield;
 }
 .textarea {
@@ -92,4 +92,26 @@
   font-size: 17px;
   color: #282c34;
   align-self: flex-start;
+}
+@media screen and (max-width: 900px) {
+  .go_back {
+    top: 2%;
+  }
+  .form_container {
+    margin-top: 4%;
+  }
+  .form {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .go_back {
+    top: 2%;
+  }
+  .form_container {
+    margin-top: 12%;
+  }
+  .form {
+    width: 100%;
+  }
 }

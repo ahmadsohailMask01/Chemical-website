@@ -43,7 +43,7 @@ const AddProduct = () => {
   return (
     <>
       <section className={styles.form_section}>
-        <Link href={"/products"} title="Go back to products">
+        <Link href={"/admin_dashboard"} title="Go back to products">
           <RiArrowGoBackLine className={styles.go_back} />
         </Link>
         <div className={styles.form_container}>
