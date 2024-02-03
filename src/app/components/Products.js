@@ -3,6 +3,8 @@ import React, { useEffect } from "react";
 import Productslist from "./Products_List";
 import styles from "../../../styles/products.module.css";
 import Link from "next/link";
+import loading from "../../../assets/loading.gif";
+import Image from "next/image";
 
 const Products = () => {
   useEffect(() => {
@@ -17,7 +19,8 @@ const Products = () => {
     <>
       <section className={styles.section_products}>
         <div className={styles.load} id="loading">
-          Loading...
+          <span>Loading</span>
+          <Image src={loading} className={styles.loading_gif}></Image>
         </div>
         <div className={styles.products_container} id="container">
           <Productslist />
