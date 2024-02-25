@@ -98,9 +98,6 @@ const Header = () => {
             <Link href="/products" className={styles.links_style}>
               Products
             </Link>
-            <Link href="/blog" className={styles.links_style}>
-              Blog
-            </Link>
             <Link href="/contact" className={styles.links_style}>
               Contact
             </Link>
