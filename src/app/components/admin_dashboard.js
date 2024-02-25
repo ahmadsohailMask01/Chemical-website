@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../styles/admin.module.css";
-import Admin_Products from "./Admin_products";
+import Admin_Products from "./Admin_products.jsx";
 import Logout from "./logout";
 
 const Admin_Dashboard = () => {
