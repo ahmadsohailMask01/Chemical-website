@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import AdminProductslist from "./AdminProductslist";
 import styles from "../../../styles/products.module.css";
 import Link from "next/link";

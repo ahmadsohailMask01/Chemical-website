@@ -49,7 +49,7 @@ const Footer = () => {
                   Office Time
                 </label>
                 <font className={styles.office_label_font}>
-                  9:00AM - 5:00PM
+                  1:00 PM - 6:00 PM
                 </font>
               </div>
             </div>
@@ -68,7 +68,7 @@ const Footer = () => {
           </div>
           <div className={styles.con2div2}>
             <span className={styles.aboutus_h}>Useful Links</span>
-            <div className={styles.links}>
+            <div className={styles.link}>
               <Link href="/" className={styles.links_style}>
                 Home
               </Link>
@@ -77,9 +77,6 @@ const Footer = () => {
               </Link>
               <Link href="/products" className={styles.links_style}>
                 Services
-              </Link>
-              <Link href="/blog" className={styles.links_style}>
-                Blog
               </Link>
               <Link href="/contact" className={styles.links_style}>
                 Contact Us
