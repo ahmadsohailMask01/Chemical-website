@@ -59,7 +59,9 @@ const Header = () => {
                   Call Us
                 </label>
                 <number style={{ width: `200%`, color: `darkgrey` }}>
-                  0334-4521497
+                  0334-4102442
+                  <br />
+                  0321-8884433
                 </number>
               </div>
             </div>

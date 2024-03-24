@@ -94,14 +94,21 @@ const Contact = () => {
               <IoLocationOutline className={styles.icon} />
               <div className={styles.row_col}>
                 <span className={styles.info_head}>Address</span>
-                <span className={styles.info_data}>Lahore, Pakistan</span>
+                <span className={styles.info_data}>
+                  Near ZOOM Petrol Pump, Faisalabad Road, Khurrianwala
+                  Faisalabad
+                </span>
               </div>
             </div>
             <div className={styles.info_row}>
               <FiPhoneCall className={styles.icon} />
               <div className={styles.row_col}>
                 <span className={styles.info_head}>Call Us</span>
-                <span className={styles.info_data}>+923344521497</span>
+                <span className={styles.info_data_no}>
+                  0334-4102442
+                  <br />
+                  0321-8884433
+                </span>
               </div>
             </div>
             <div className={styles.info_row}>

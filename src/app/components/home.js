@@ -67,7 +67,7 @@ const MainPage = () => {
           <div className={styles.container2}>
             <div className={styles.card}>
               <div className={styles.card_container}>
-                <h3 className={styles.h3}>Chemical Research</h3>
+                <h3 className={styles.h3}>Pigment Binder</h3>
                 <span className={styles.h4}>
                   Best Chemical Research Industry
                 </span>
@@ -77,7 +77,7 @@ const MainPage = () => {
 
             <div className={styles.card}>
               <div className={styles.card_container}>
-                <h3 className={styles.h3}>Chemical Research</h3>
+                <h3 className={styles.h3}>Silicon</h3>
                 <span className={styles.h4}>
                   Best Chemical Research Industry
                 </span>
@@ -86,7 +86,7 @@ const MainPage = () => {
             </div>
             <div className={styles.card}>
               <div className={styles.card_container}>
-                <h3 className={styles.h3}>Chemical Research</h3>
+                <h3 className={styles.h3}>Lechra Protector</h3>
                 <span className={styles.h4}>
                   Best Chemical Research Industry
                 </span>
@@ -136,7 +136,7 @@ const MainPage = () => {
           <div className={styles.information_div}>
             <div className={styles.info_div_container}>
               <span className={styles.info_div_heading}>
-                We are leader in Industrial Market since 2001
+                We are leader in Industrial Market since 2020
               </span>
               <span className={styles.information_para}>
                 We are able to guarantee a very high level of satisfaction for

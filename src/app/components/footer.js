@@ -27,7 +27,9 @@ const Footer = () => {
                   Call Us
                 </label>
                 <number style={{ width: `200%`, color: `darkgrey` }}>
-                  0334-4521497
+                  0334-4102442
+                  <br />
+                  0321-8884433
                 </number>
               </div>
             </div>
@@ -49,7 +51,7 @@ const Footer = () => {
                   Office Time
                 </label>
                 <font className={styles.office_label_font}>
-                  1:00 PM - 6:00 PM
+                  9:00 PM - 6:00 PM
                 </font>
               </div>
             </div>
@@ -68,7 +70,7 @@ const Footer = () => {
           </div>
           <div className={styles.con2div2}>
             <span className={styles.aboutus_h}>Useful Links</span>
-            <div className={styles.link}>
+            <div className={styles.links}>
               <Link href="/" className={styles.links_style}>
                 Home
               </Link>
