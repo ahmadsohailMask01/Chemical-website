@@ -47,8 +47,8 @@ const Header = () => {
           <div className={styles.sec2div1}>
             <Image src={logo} className={styles.logo_image} alt="Logo_image" />
             <div className={styles.branding}>
-              <h1 className={styles.branding_name}>PAKChem Industry</h1>
-              <h5 className={styles.subheading}>Traders</h5>
+              <h1 className={styles.branding_name}>PAKChem Enterprises</h1>
+              <h5 className={styles.subheading}>Marketplace</h5>
             </div>
           </div>
           <div className={styles.sec2div2}>
