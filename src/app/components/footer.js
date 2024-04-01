@@ -15,8 +15,8 @@ const Footer = () => {
           <div className={styles.branding}>
             <Image src={logo} className={styles.logo} alt="Logo_image" />
             <div className={styles.Branding_name}>
-              <span className={styles.main_head}>PAKChem Industry</span>
-              <span className={styles.sub_head}>Traders</span>
+              <span className={styles.main_head}>PAKChem Enterprises</span>
+              <span className={styles.sub_head}>Marketplace</span>
             </div>
           </div>
           <div className={styles.div2}>
@@ -62,10 +62,10 @@ const Footer = () => {
           <div className={styles.con2div1}>
             <span className={styles.aboutus_h}>About Us</span>
             <p className={styles.about_para}>
-              We are able to guarantee a very high level of satisfaction for our
-              clients. Pharetra libero non facilisis imperdiet, mi augue feugiat
-              nisl sit amet mollis enim velit Vestibulum fringilla nulla
-              ultricies.
+              PAKChem Enterprises is a pioneer in innovation and quality. With a
+              steadfast commitment to excellence, we specialize in providing
+              cutting-edge solutions across various industries. PAKChem
+              Enterprises – where excellence meets integrity.
             </p>
           </div>
           <div className={styles.con2div2}>

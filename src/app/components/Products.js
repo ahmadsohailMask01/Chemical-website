@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Productslist from "./Products_List";
 import styles from "../../../styles/products.module.css";
