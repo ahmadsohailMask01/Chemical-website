@@ -407,6 +407,9 @@
   .blogs_heading {
     font-size: 40px;
   }
+  .section4 {
+    height: 1200px;
+  }
 }
 @media screen and (max-width: 351px) {
   .blogs_heading {
@@ -414,8 +417,5 @@
   }
   .interest {
     top: 0.5%;
-  }
-  .section4 {
-    height: 1300px;
   }
 }
