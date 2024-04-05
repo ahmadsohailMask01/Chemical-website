@@ -403,11 +403,19 @@
     opacity: 0.5;
   }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 450px) {
+  .blogs_heading {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 351px) {
+  .blogs_heading {
+    font-size: 30px;
+  }
   .interest {
     top: 0.5%;
   }
   .section4 {
-    height: 1100px;
+    height: 1200px;
   }
 }
