@@ -355,6 +355,9 @@
   }
 }
 @media screen and (max-width: 670px) {
+  .div2 {
+    clip-path: polygon(24% 86%, 100% 70%, 100% 100%, 0 100%);
+  }
   .sec2_container {
     justify-content: space-between;
   }
