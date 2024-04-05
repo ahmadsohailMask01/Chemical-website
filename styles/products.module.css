@@ -4,7 +4,8 @@
   margin-bottom: 3%;
   flex-direction: column;
   row-gap: 10px;
-  width: 100%;
+  width: 96%;
+  padding: 2%;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -15,7 +16,7 @@
   padding: 3%;
   justify-content: center;
   align-items: center;
-  row-gap: 20px;
+  row-gap: 30px;
   width: 90%;
 }
 .product {
@@ -125,7 +126,7 @@
 }
 @media screen and (max-width: 768px) {
   .product {
-    width: 100%;
+    width: 90%;
   }
 }
 
