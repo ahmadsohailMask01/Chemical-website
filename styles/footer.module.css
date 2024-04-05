@@ -231,6 +231,14 @@
     width: 99%;
   }
 }
+@media screen and (max-width: 650px) {
+  .div2 {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 15px;
+  }
+}
 @media screen and (max-width: 501px) {
   .container2 {
     flex-direction: column;
