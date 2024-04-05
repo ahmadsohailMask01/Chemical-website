@@ -483,7 +483,7 @@
     width: 70%;
   }
   .section2 {
-    margin-top: 130%;
+    margin-top: 135%;
   }
   .row1 {
     flex-direction: column;
@@ -495,7 +495,7 @@
 }
 @media screen and (max-width: 490px) {
   .section2 {
-    margin-top: 170%;
+    margin-top: 180%;
   }
   .container5 {
     justify-content: center;
@@ -516,11 +516,11 @@
 }
 @media screen and (max-width: 400px) {
   .section2 {
-    margin-top: 180%;
+    margin-top: 190%;
   }
 }
 @media screen and (max-width: 380px) {
   .section2 {
-    margin-top: 190%;
+    margin-top: 210%;
   }
 }
