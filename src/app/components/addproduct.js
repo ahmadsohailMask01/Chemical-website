@@ -18,7 +18,6 @@ const AddProduct = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       await fetch(`${BASE_API_URL}/api/products`, {
         method: "POST",

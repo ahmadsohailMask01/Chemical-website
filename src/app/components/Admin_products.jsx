@@ -12,7 +12,6 @@ const Admin_Products = () => {
         <Link href={"/addProduct"} className={styles.btn} title="Add Product">
           Add Product
         </Link>
-        <Load />
         <div className={styles.products_container} id="container">
           <AdminProductslist />
         </div>

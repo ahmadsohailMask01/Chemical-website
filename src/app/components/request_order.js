@@ -10,8 +10,8 @@ import { BASE_API_URL } from "../../../utils/constants";
 const Request_Product = ({ title, price }) => {
   const router = useRouter();
 
-  const [Product_title] = useState(title);
-  const [Product_price] = useState(price);
+  const [Product_title, setProductTitle] = useState(title);
+  const [Product_price, setProductPrice] = useState(price);
   const [client_name, set_clientname] = useState("");
   const [client_email, set_clientemail] = useState("");
   const [client_phone, set_clientphone] = useState("");

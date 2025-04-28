@@ -7,20 +7,13 @@ import Image from "next/image";
 
 const Load = () => {
   const [showload, setload] = useState(true);
-  useEffect(() => {
-    const loadingfunc = () => {
-      setload(false);
-    };
-    setTimeout(loadingfunc, 2000);
-  }, []);
+
   return (
     <>
-      {showload && (
-        <div className={styles.load} id="loading">
-          <span>Loading</span>
-          <Image src={loading} className={styles.loading_gif}></Image>
-        </div>
-      )}
+      <div className={styles.load} id="loading">
+        <span>Loading</span>
+        <Image src={loading} className={styles.loading_gif}></Image>
+      </div>
     </>
   );
 };

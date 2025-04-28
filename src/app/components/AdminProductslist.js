@@ -1,28 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../../styles/products.module.css";
 import { FaEdit } from "react-icons/fa";
 import Link from "next/link";
 import RemoveButton from "./removeButton";
 import { BASE_API_URL } from "../../../utils/constants";
+import Load from "./load";
 
-const getProducts = async () => {
-  try {
-    const res = await fetch(`${BASE_API_URL}/api/products`, {
-      method: "GET",
-      cache: "no-store",
-    });
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch Products");
+const AdminProductslist = () => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const getProducts = () => {
+    try {
+      fetch(`${BASE_API_URL}/api/products`, {
+        method: "GET",
+        cache: "no-store",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setData(data.products);
+          setLoading(false);
+        });
+    } catch (error) {
+      console.log("Error loading products: ", error);
     }
-    return res.json();
-  } catch (error) {
-    console.log("Error loading products: ", error);
-  }
-};
+  };
 
-const AdminProductslist = async () => {
-  const { products } = await getProducts();
+  useEffect(() => {
+    getProducts();
+  }, []);
   const pk_currency = Intl.NumberFormat("en-PK", {
     style: "currency",
     currency: "PKR",
@@ -31,9 +36,10 @@ const AdminProductslist = async () => {
 
   return (
     <>
-      {products.length <= 0
+      {loading && <Load />}
+      {data?.length <= 0
         ? "No Products to Show"
-        : products.map((t) => (
+        : data?.map((t) => (
             <div
               className={styles.product}
               key={t._id}

@@ -95,8 +95,7 @@ const Contact = () => {
               <div className={styles.row_col}>
                 <span className={styles.info_head}>Address</span>
                 <span className={styles.info_data}>
-                  Near ZOOM Petrol Pump, Faisalabad Road, Khurrianwala
-                  Faisalabad
+                  Bedian Road Near Lohy wale mill Feroze Pur Road, Kasur, Lahore
                 </span>
               </div>
             </div>

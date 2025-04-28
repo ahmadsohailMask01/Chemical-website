@@ -8,7 +8,6 @@ const Products = () => {
   return (
     <>
       <section className={styles.section_products}>
-        <Load />
         <Productslist />
       </section>
     </>

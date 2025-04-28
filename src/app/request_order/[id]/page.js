@@ -1,28 +1,42 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Request_Product from "../../components/request_order";
 import { BASE_API_URL } from "../../../../utils/constants";
+import Load from "@/app/components/load";
 
-const getProductbyId = async (id) => {
-  try {
-    const res = await fetch(`${BASE_API_URL}/api/products/${id}`, {
-      cache: "no-store",
-    });
-    if (!res.ok) {
-      throw new Error("Failed to fetch Product");
+const page = ({ params }) => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const getProductbyId = async (id) => {
+    try {
+      await fetch(`${BASE_API_URL}/api/products/${id}`, {
+        cache: "no-store",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("Data:", data);
+
+          setData(data);
+          setLoading(false);
+        });
+    } catch (error) {
+      console.log(error);
     }
-    return res.json();
-  } catch (error) {
-    console.log(error);
-  }
-};
-const page = async ({ params }) => {
+  };
   const { id } = params;
-
-  const { product } = await getProductbyId(id);
-  const { product_title, product_price, product_description } = product;
+  useEffect(() => {
+    getProductbyId(id);
+  }, []);
   return (
     <>
-      <Request_Product id={id} title={product_title} price={product_price} />
+      {loading ? <Load /> : null}
+      {data ? (
+        <Request_Product
+          id={id}
+          title={data.product.product_title}
+          price={data.product.product_price}
+        />
+      ) : null}
     </>
   );
 };
