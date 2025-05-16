@@ -8,6 +8,7 @@ import { LuMailOpen } from "react-icons/lu";
 import { toast as note } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { BASE_API_URL } from "../../../utils/constants";
+import MapComponent from "./MapComponent";
 
 const Contact = () => {
   const router = useRouter();
@@ -15,6 +16,9 @@ const Contact = () => {
   const [email, set_email] = useState("");
   const [phone, set_phone] = useState("");
   const [message, set_message] = useState("");
+
+  const lat = 31.213849407350402; // location: PAKChem Traders
+  const lng = 74.43962131752603;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -120,6 +124,18 @@ const Contact = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div
+          style={{
+            display: `flex`,
+            justifyContent: `center`,
+            flexDirection: `column`,
+            alignItems: `center`,
+            marginTop: `2%`,
+          }}
+        >
+          <h1>Find Us On Google Maps</h1>
+          <MapComponent lat={lat} lng={lng} />
         </div>
       </section>
     </>

@@ -11,17 +11,23 @@
   "dependencies": {
     "@coreui/icons": "^3.0.1",
     "@coreui/icons-react": "^2.2.1",
+    "@tailwindcss/postcss": "^4.1.7",
     "@types/jsonwebtoken": "^9.0.5",
+    "axios": "^1.9.0",
     "js-cookie": "^3.0.5",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.0.3",
+    "mongoose": "^8.14.2",
+    "multer": "^1.4.5-lts.2",
     "next": "14.0.2",
+    "next-connect": "^1.0.0",
     "nodemailer": "^6.9.8",
     "nodemon": "^3.0.1",
+    "postcss": "^8.5.3",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.12.0",
     "react-player": "^2.13.0",
     "react-responsive-carousel": "^3.2.23",
-    "react-toastify": "^10.0.1"
+    "react-toastify": "^10.0.1",
+    "tailwindcss": "^4.1.7"
   }
 }

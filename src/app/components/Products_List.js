@@ -19,7 +19,9 @@ const Productslist = () => {
           return val.json();
         })
         .then((product) => {
-          setData(product.products);
+          console.log(product);
+
+          setData(product);
           setLoading(false);
         })
         .catch((error) => {
@@ -45,6 +47,13 @@ const Productslist = () => {
               key={t._id}
               title={`Order ID = ${t._id}`}
             >
+              {t.image && (
+                <img
+                  src={t.image}
+                  alt={t.product_title}
+                  style={{ width: 200, height: "auto" }}
+                />
+              )}
               <span className={`${styles.product_title} ${styles.select}`}>
                 {t.product_title}
               </span>
